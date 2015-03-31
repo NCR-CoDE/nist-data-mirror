@@ -30,6 +30,7 @@ rm -f $DOWNLOAD_JAR_FILE
 wget "${NEXUS_SERVER}/service/local/artifact/maven/redirect?r=thirdparty&g=com.ncr.mobile.util&a=nist-data-mirror&v=${DOWNLOAD_JAR_FILE_VERSION}&e=jar" -O $DOWNLOAD_JAR_FILE
 
 java -jar $DOWNLOAD_JAR_FILE $TEMP_DIR
+rm ${TEMP_DIR}/*.gz
 mv $TEMP_DIR/* /var/www/owasp
 echo "The files have been moved into place."
 rm -f $LOCKFILE
