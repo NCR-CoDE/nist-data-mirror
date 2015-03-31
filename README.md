@@ -18,7 +18,7 @@ build and deploy
 ### Build
 
 ```sh
-gradle clean build
+./gradlew clean build
 ```
 
 ### Deploy
@@ -26,7 +26,7 @@ gradle clean build
 Note that for this to work you must update the `<>` values in `init.gradle`.
 
 ```sh
-gradle -I init.gradle clean uploadArchives
+./gradlew -I init.gradle clean uploadArchives
 ```
 
 Copyright & License
